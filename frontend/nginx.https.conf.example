@@ -1,0 +1,23 @@
+# Replace nginx.conf for a local HTTPS demo and mount data/certs at /etc/nginx/certs.
+server {
+  listen 80;
+  return 301 https://$host:8443$request_uri;
+}
+server {
+  listen 443 ssl;
+  server_name localhost;
+  ssl_certificate /etc/nginx/certs/localhost.crt;
+  ssl_certificate_key /etc/nginx/certs/localhost.key;
+  ssl_protocols TLSv1.2 TLSv1.3;
+  root /usr/share/nginx/html;
+  client_max_body_size 11m;
+  location / { try_files $uri $uri/ /index.html; }
+  location /api/ {
+    proxy_pass http://backend:8000;
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection "upgrade";
+    proxy_set_header Host $host;
+    proxy_read_timeout 300s;
+  }
+}

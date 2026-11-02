@@ -1,0 +1,133 @@
+{
+  "trained_at": "2026-09-19T05:30:46.611077+00:00",
+  "model": "thermal-hog-logreg-v2",
+  "features": "HOG: 16x16 blocks, 8x8 cells, 9 orientations on 96x96 CLAHE grayscale",
+  "classifier": "multinomial logistic regression; C=10.0",
+  "total_images": 825,
+  "original_images": 838,
+  "duplicate_or_unreadable_images": 13,
+  "class_counts": {
+    "sad": 201,
+    "surprise": 69,
+    "disgust": 142,
+    "happy": 215,
+    "neutral": 198
+  },
+  "split_method": "fixed stratified 80/20 image split; seed=42",
+  "evaluation_train_images": 660,
+  "held_out_test_images": 165,
+  "held_out_test_accuracy": 0.8363636363636363,
+  "test_accuracy": 0.8363636363636363,
+  "splits": {
+    "train": 660,
+    "validation": 0,
+    "test": 165
+  },
+  "duplicate_images": 12,
+  "corrupt_images": [
+    {
+      "path": "C:\\Users\\suhas\\Downloads\\dataset\\trainit\\3. DISGUST F\\disgust final th\\d20.png",
+      "error": "cannot identify image file <_io.BytesIO object at 0x0000019785A64720>"
+    }
+  ],
+  "history": [],
+  "report": {
+    "disgust": {
+      "precision": 0.7352941176470589,
+      "recall": 0.8928571428571429,
+      "f1-score": 0.8064516129032258,
+      "support": 28.0
+    },
+    "happy": {
+      "precision": 0.8181818181818182,
+      "recall": 0.8372093023255814,
+      "f1-score": 0.8275862068965517,
+      "support": 43.0
+    },
+    "neutral": {
+      "precision": 0.975609756097561,
+      "recall": 1.0,
+      "f1-score": 0.9876543209876543,
+      "support": 40.0
+    },
+    "sad": {
+      "precision": 0.9090909090909091,
+      "recall": 0.75,
+      "f1-score": 0.821917808219178,
+      "support": 40.0
+    },
+    "surprise": {
+      "precision": 0.5384615384615384,
+      "recall": 0.5,
+      "f1-score": 0.5185185185185185,
+      "support": 14.0
+    },
+    "accuracy": 0.8363636363636363,
+    "macro avg": {
+      "precision": 0.7953276278957772,
+      "recall": 0.7960132890365449,
+      "f1-score": 0.7924256935050257,
+      "support": 165.0
+    },
+    "weighted avg": {
+      "precision": 0.8405851007390073,
+      "recall": 0.8363636363636363,
+      "f1-score": 0.8352060393053006,
+      "support": 165.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      25,
+      1,
+      0,
+      1,
+      1
+    ],
+    [
+      2,
+      36,
+      0,
+      1,
+      4
+    ],
+    [
+      0,
+      0,
+      40,
+      0,
+      0
+    ],
+    [
+      4,
+      4,
+      1,
+      30,
+      1
+    ],
+    [
+      3,
+      3,
+      0,
+      1,
+      7
+    ]
+  ],
+  "labels": [
+    "disgust",
+    "happy",
+    "neutral",
+    "sad",
+    "surprise"
+  ],
+  "deployment_training_images": 825,
+  "training_history": [
+    {
+      "trained_at": "2026-09-19T05:30:46.625951+00:00",
+      "total_images": 825,
+      "test_accuracy": 0.8363636363636363,
+      "split_method": "fixed stratified 80/20 image split; seed=42"
+    }
+  ],
+  "limitations": "Image-level split may include the same participant in training and test. Validate on subject-disjoint data before claiming person-independent performance."
+}

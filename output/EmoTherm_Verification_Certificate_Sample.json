@@ -1,0 +1,48 @@
+{
+  "schema": "emotherm-verification-certificate/v1",
+  "certificate_id": "ESC-2026-000033-08827F76",
+  "issued_at": "2026-09-20T15:19:37.132399+00:00",
+  "verification_url": "http://127.0.0.1:5173/verify-certificate?scan=08827f76-6862-4b4d-a440-4988c03e84fb",
+  "scan": {
+    "id": "08827f76-6862-4b4d-a440-4988c03e84fb",
+    "timestamp": "2026-09-20T15:02:46.903317+00:00",
+    "source": "upload",
+    "mime": "image/bmp"
+  },
+  "prediction": {
+    "emotion": "happy",
+    "confidence": 0.9790976643562317,
+    "probabilities": {
+      "disgust": 0.005347070284187794,
+      "happy": 0.9790976643562317,
+      "neutral": 0.0006020281580276787,
+      "sad": 0.00013363227481022477,
+      "surprise": 0.014819624833762646
+    },
+    "model": "thermal-hog-logreg-v2"
+  },
+  "integrity": {
+    "image_sha256": "d9c15bf1a3d371df67e41ece150d71d0cc61bc08ae2985a5cb287159f0d963c9",
+    "record_sha256": "76db420d7044ae95038348b44e8aef9a881bc1d84c867e42430f01e171aab0f5",
+    "model_sha256": "a39110d111c295e0fe73762ff68c183cc573e817610a07c1c1372c71d147da4e",
+    "block_index": 33,
+    "block_hash": "00d2aeeb3283e35291ed7b37151b5087c2a006b8bc894cba848c2d8818fdbcf6",
+    "previous_block_hash": "005c5277b00134907b1f7c326e2ed22e257a81ac4726a21fe2a991dffcf3c35a",
+    "record_valid": true,
+    "chain_valid": true,
+    "verified_at": "2026-09-20T15:19:37.134392+00:00"
+  },
+  "cryptography": {
+    "image_and_prediction_encryption": "AES-256-GCM",
+    "key_wrapping": "RSA-3072-OAEP-SHA256",
+    "certificate_signature": "RSA-PSS-SHA256",
+    "record_hash": "SHA-256"
+  },
+  "notice": "Research estimate of a trained facial-expression class; not a determination of internal emotional state.",
+  "signature": {
+    "algorithm": "RSA-PSS-SHA256",
+    "signed_payload_sha256": "8f4fd686ebebb5af00bf1b68eb591d3ba618e020a14729dc4d4a10db613a031c",
+    "public_key_fingerprint": "982662cd5f54fa340245095db14b4b21bf6a7fbbcf410f423efff1c98958e3e6",
+    "value": "OaKtCdvfs4/j0ilc4OR9+Xkmuq9tt/MavU9Wu0aVZHa7IhA9+l30Uc2Njyulyj/GBPKmqwYe0679eakPVa6hN4kZdfRU6bOjRnZTOu7Egi5YOlJ/rC/vNP6PXo3GUOYabbJzIHsjMTAsFzZXLWQCWY5Jz9fwAiZ4pb7d3MSC/Hn2X/2E/iNUUIHyJsOn5S9VedySk8mzaz8V/IR/Fh3rVIj+zMQKkfs3MAG1pLst/NmWeXFnO7000nPmVzcBIBRGqxuZjbbN/jZRZUZ7/Wtx8F2vG8/I/e6E7sKslJarVqXz4oNcAjkgP3moQv0k1/cnVmOgRTNapRhbmioHNjjHpmqH4S0pxI1dN6jiJhCON1E5GudyoOq5dn+F9jSNBthYoO2ZHtup7La1szDYzPQDg8Ekvom10bVVWnr5/gajrnZKI1xcP2s+G5txtst8MODZZ2R7LlkmgOyemp7UHjsqdG15FRiYdbl1lYVe3BGwMapAs78UXEYFaV/tuw9TP+yL"
+  }
+}
